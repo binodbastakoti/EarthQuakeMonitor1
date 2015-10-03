@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <!-- activity view -->
+    <RelativeLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/detailMagnitude"
+            android:text="Magnitude"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/detailDate"
+            android:layout_below="@+id/detailMagnitude"
+            android:layout_alignLeft="@+id/detailMagnitude"
+            android:layout_alignStart="@+id/detailMagnitude"
+            android:text="Date" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/detailLocation"
+            android:layout_below="@+id/detailDate"
+            android:layout_alignLeft="@+id/detailDate"
+            android:layout_alignStart="@+id/detailDate"
+            android:text="Location" />
+    </RelativeLayout>
+
+    <!-- activity view -->
+    <RelativeLayout
+        android:id="@+id/googleMap"
+        android:layout_width="match_parent"
+        android:layout_height="364dp"
+        android:layout_weight="0.48">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
